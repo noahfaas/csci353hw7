@@ -12,7 +12,7 @@ void test_count_ones(int arr[], int n, int expected)
     cout << endl;
     cout << "Expected: " << expected << endl;
     cout << "Result:   " << result << endl;
-    cout << "------------------------" << endl;
+    cout << endl;
 }
 
 void test_count_target(int arr[], int n, int t, int expected)
@@ -25,7 +25,7 @@ void test_count_target(int arr[], int n, int t, int expected)
     cout << endl;
     cout << "Expected: " << expected << endl;
     cout << "Result:   " << result << endl;
-    cout << "------------------------" << endl;
+    cout << endl;
 }
 
 int main()

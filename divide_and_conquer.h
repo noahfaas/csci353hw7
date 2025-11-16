@@ -1,78 +1,66 @@
 #ifndef DIVIDE_AND_CONQUER_H
 #define DIVIDE_AND_CONQUER_H
 
-int count_ones(int arr[], int n)
-{
+int count_ones(int arr[], int n) {
     int left = 0;
     int right = n - 1;
-    int firstOne = n;
+    int first_one = n;
 
-    while (left <= right)
-    {
+    while (left <= right) {
         int mid = (left + right) / 2;
 
-        if (arr[mid] == 1)
-        {
+        if (arr[mid] == 1) {
             firstOne = mid;
             right = mid - 1;
         }
-        else
-        {
+        else {
             left = mid + 1;
         }
     }
 
-    return n - firstOne;
+    return n - first_one;
 }
 
-int count_target(int arr[], int n, int t)
-{
+int count_target(int arr[], int n, int t) {
     int left, right, mid;
 
     int first = n;
     left = 0;
     right = n - 1;
 
-    while (left <= right)
-    {
+    while (left <= right) {
         mid = (left + right) / 2;
 
-        if (arr[mid] >= t)
-        {
+        if (arr[mid] >= t) {
             first = mid;
             right = mid - 1;
         }
-        else
-        {
+        else {
             left = mid + 1;
         }
     }
 
-    if (first == n || arr[first] != t)
-    {
+    if (first == n || arr[first] != t) {
         return 0;
     }
 
-    int firstGreater = n;
+    int first_greater = n;
     left = 0;
     right = n - 1;
 
-    while (left <= right)
-    {
+    while (left <= right) {
         mid = (left + right) / 2;
 
-        if (arr[mid] > t)
-        {
-            firstGreater = mid;
+        if (arr[mid] > t) {
+            first_greater = mid;
             right = mid - 1;
         }
-        else
-        {
+        else {
             left = mid + 1;
         }
     }
 
-    return firstGreater - first;
+    return first_greater - first;
 }
 
 #endif
