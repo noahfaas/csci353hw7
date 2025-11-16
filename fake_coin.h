@@ -47,13 +47,13 @@ int find_fake(int arr[], int start, int stop) {
         }
     }
 
-    int groupSize = n / 3;
+    int group_size = n / 3;
 
     int start1 = start;
-    int stop1 = start1 + groupSize - 1;
+    int stop1 = start1 + group_size - 1;
 
     int start2 = stop1 + 1;
-    int stop2 = start2 + groupSize - 1;
+    int stop2 = start2 + group_size - 1;
 
     int start3 = stop2 + 1;
     int stop3 = stop;

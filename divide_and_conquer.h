@@ -10,7 +10,7 @@ int count_ones(int arr[], int n) {
         int mid = (left + right) / 2;
 
         if (arr[mid] == 1) {
-            firstOne = mid;
+            first_one = mid;
             right = mid - 1;
         }
         else {
